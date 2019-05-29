@@ -22,3 +22,20 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+print(sys.argv)
+# sys.argv = ['14_cal.py', '2019']
+# month = int(sys.argv[1])
+# year = int(sys.argv[2])
+
+if len(sys.argv) == 1:
+  year = 2019
+  month = 6
+elif len(sys.argv) ==2:
+  year = 2019
+  month = int(sys.argv[1])
+elif len(sys.argv) ==3:
+  year = int(sys.argv[2])
+  month = int(sys.argv[1])
+else:
+  print('Error')
+print(calendar.month(year, month))
